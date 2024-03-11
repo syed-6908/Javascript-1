@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            padding-top: 107px;
+            display: flex;
+            flex-direction:column;
+            width:5;
+            align-items:center;
+        
+        }
+        button{
+            color: brown;
+            text-shadow:20px;
+        
+        }
+    </style>
+</head>
+<body>
+ <form action="">
+<label>Name</label>
+<input type="text" id="username"><br>
+<label>EMAIL</label>
+<input type="email" id="Mail"><br>
+ <label>password</label>
+ <input type="paasword" id="new"><br>
+ <label> MALE</label>
+ <input type="radio" name="gender" id="male"><br>
+ <label>FEMALE</label>
+ <input type="radio" name="gender" id="female"><br>
+ <!-- <button onclick="validation()">submit</button> -->
+ <input type="button" onclick="validation()" value="submit">
+</form>
+
+<script>
+    function  validation(){
+    let name=document.getElementById("username").value;
+    let email=document.getElementById("Mail").value;
+    let ert=document.getElementById("new").value;
+    let hll=document.getElementById("male").value;
+    let qw=document.getElementById("female").checked;
+    let genderradios=document.getElementsByName("gender");
+
+
+  //  if(!name|| !password|| !email|| (!male && !female)){
+  //   alert("all feilds are required")
+  //   return false;
+  //  }
+ 
+  console.log(name);
+console.log(email);
+console.log(ert);
+console.log(hll);
+console.log(qw);
+
+  
+      if(name===""){
+        alert("please enter the name");
+      }
+      else if(email===""){
+        alert("nov enter the mail na");
+      }
+      else if(password===""){
+        alert("enter the password thala");
+      }
+      else{
+        let selectedgender ="";
+        for(leti=0;i<genderradios.length;i++) {
+          if (genderradios[i].checked){
+            selectedgender = genderradios[i].value;
+            break;
+          }
+        }
+      }
+      
+
+
+
+  
+}
+}
+
+// document.addEventListener("keypress",function(event){
+//   console.log(event.keyCode);
+// })
+
+// document.addEventListener("keyup",function(event){
+//   console.log(String.fromCharCode(event.keyCode))
+// })
+
+</script>
+
+
+
+</body>
+</html>
